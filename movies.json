@@ -1,0 +1,82 @@
+ [
+    {
+        "id" : 1,
+        "Title" : "Det regnar på vår kärlek",
+        "Genre" : ["Drama, Romans"],
+        "Length" : "95 minuter",
+        "Age limit" : "Barntillåten",
+        "cover" : "assets/Movie1.png"
+    },
+    {
+        "id" : 2,
+        "Title" : "Rain Man",
+        "Genre" : "Drama",
+        "Length" : "133 minuter",
+        "Age limit" : "Från 11 år",
+        "cover" : "assets/Movie2.png"
+    },
+    {
+        "id" : 3,
+        "Title" : "Singin In The Rain",
+        "Genre" : ["Komedi", "Musikal", "Romans"],
+        "Length" : "103 minuter",
+        "Age limit" : "Barntillåten",
+        "cover" : "assets/Movie3.png"
+    },
+    {
+        "id" : 4,
+        "Title" : "The Art Of Racing In The Rain",
+        "Genre" : ["Komedi", "Drama", "Romans"],
+        "Length" : "109 minuter",
+        "Age limit" : "Från 7år",
+        "cover" : "assets/Movie4.png"
+    },
+    {
+        "id" : 5,
+        "Title" : "Purple Rain",
+        "Genre" : ["Drama", "Musikal", "Romans"],
+        "Length" : "111 minuter",
+        "Age limit" : "Från 15 år",
+        "cover" : "assets/Movie5.png"
+    },
+    {
+        "id" : 6,
+        "Title" : "Rain",
+        "Genre" : ["Action", "Drama", "Familj"],
+        "Length" : "96 minuter",
+        "Age limit" : "från 15 år",
+        "cover" : "assets/Movie6.png"
+    },
+    {
+        "id" : 7,
+        "Title" : "Hard Rain",
+        "Genre" : ["Action", "Deckare", "Drama"],
+        "Length" : "97 minuter",
+        "Age limit" : "Från 15 år",
+        "cover" : "assets/Movie7.png"
+    },
+    {
+        "id" : 8,
+        "Title" : "Snails In The Rain",
+        "Genre" : ["Drama", "Romans"],
+        "Length" : "82 minuter",
+        "Age limit" : "Från 11 år",
+        "cover" : "assets/Movie8.png"
+    },
+    {
+        "id" : 9,
+        "Title" : "Like Sunday, Like Rain",
+        "Genre" : ["Drama", "Musikal"],
+        "Length" : "104 minuter",
+        "Age limit" : "Från 7 år",
+        "cover" : "assets/Movie9.png"
+    },
+    {
+        "id" : 10,
+        "Title" : "A Hatful Of Rain",
+        "Genre" : "Drama",
+        "Length" : "112 minuter",
+        "Age limit" : "Från 15 år",
+        "cover" : "assets/Movie10.png"
+    }
+]
