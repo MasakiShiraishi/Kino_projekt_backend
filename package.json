@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "- Language used in commits: English.\r - Be as clear as possible in commits and names.\r - Two approvals on every pull request before merge. Whoever can perform a merge.\r - Prettier extension in Vscode with single quotation.\r - BEM-ish for class names in SASS/CSS.\r - Work in separate branches; dont remove the branch after merge.\r - Assign yourself when working on an issue.\r - Use kebab-case when for branch names.",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "sass:watch": "sass --no-source-map --watch src/main.scss assets/main.css"
   },
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/JrSchoolAccount/Group-Assignment2-Cinema-Project/issues"
   },
-  "homepage": "https://github.com/JrSchoolAccount/Group-Assignment2-Cinema-Project#readme"
+  "homepage": "https://github.com/JrSchoolAccount/Group-Assignment2-Cinema-Project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
