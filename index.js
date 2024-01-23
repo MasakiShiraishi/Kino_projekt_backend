@@ -58,9 +58,6 @@ app.get("/filmer/movies/:movieId", async (req, res) => {
   const movie = await loadMovie(req.params.movieId);
   res.render("movie", { movie });
 });
-// app.get('/filmer', async (request, response) => {
-//           renderPage(response, 'filmer');
-//         });
 
 app.get("/about-us", async (request, response) => {
   renderPage(response, "about-us");
@@ -70,10 +67,6 @@ app.get("/event", async (request, response) => {
   renderPage(response, "event");
 });
 
-// app.get('/tickets', async (request, response) => {
-//           renderPage(response, 'Biljetter');
-//         });
-
 app.get("/english", async (request, response) => {
   renderPage(response, "English");
 });
@@ -81,13 +74,3 @@ app.get("/english", async (request, response) => {
 app.use("/static", express.static("./static"));
 
 app.listen(5080);
-
-// app.use((err, req, res, next) => {
-//           console.error(err.stack);
-//           res.status(500).send('Internal Server Error');
-//         });
-
-//         app.listen(3080, () => {
-//           console.log('Server is running on http://localhost:3080');
-//         });
-

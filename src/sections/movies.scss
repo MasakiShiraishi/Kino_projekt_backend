@@ -3,11 +3,11 @@
   &__title {
     position: relative;
     text-align: left;
-    padding-left: 5%;
+    padding-left: 10%;
   }
 
   &__li {
-    padding-top: 2.5rem;
+    padding: 2.5rem 0 0 15%;
   }
   &__link {
     font-weight: bold;
@@ -20,7 +20,7 @@
   }
   &__link:hover {
     color: yellow;
-    transform: scale(1.2);
+    transform: translate(30px);
     transition: transform 0.3s ease;
   }
 }
@@ -28,6 +28,7 @@
 .movie {
   &__main {
     // margin-top: -10%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,11 +36,25 @@
     margin-left: 25%;
     max-width: 850px;
     width: 100%;
+    background-image: url('/assets/raining-background.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
   }
   &__article{
     // background-color: RED;
     min-height: 250px;
-    
+    opacity: 1;
   }
   &__title {
     font-size: 3rem;

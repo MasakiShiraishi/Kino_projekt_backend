@@ -8,7 +8,7 @@
     "sass:watch": "sass --no-source-map --watch src/main.scss static/main.css",
     "start": "node ."
   },
-  "author": "JR",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.69.7"
