@@ -1,89 +1,84 @@
-import express from 'express';
-import { engine } from 'express-handlebars';
+import express from "express";
+import { engine } from "express-handlebars";
 import { loadMovie, loadMovies } from "./static/movies.js";
-import fs from 'fs/promises';
+import fs from "fs/promises";
 
 const app = express();
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', './templates');
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", "./templates");
 
 const MENU = [
   {
-    label: 'Index',
-    link: '/',
+    label: "Index",
+    link: "/",
   },
   {
-          label: 'Filmer',
-          link: '/filmer',
-        },
-  {
-    label: 'Om oss',
-    link: '/about-us',
+    label: "Filmer",
+    link: "/filmer",
   },
   {
-    label: 'Evenemang',
-    link: '/event',
+    label: "Om oss",
+    link: "/about-us",
   },
   {
-          label: 'English',
-          link: '/english',
-        },
-
+    label: "Evenemang",
+    link: "/event",
+  },
+  {
+    label: "English",
+    link: "/english",
+  },
 ];
 
 async function renderPage(response, page) {
-  const currentPath = (page == 'index')? '/' : `/${page}`;
+  const currentPath = page == "index" ? "/" : `/${page}`;
 
   response.render(page, {
-    menuItems: MENU.map(item => {
+    menuItems: MENU.map((item) => {
       return {
         active: currentPath == item.link,
         label: item.label,
         link: item.link,
       };
-    })
+    }),
   });
 }
-app.use('/assets', express.static('assets'));
+app.use("/assets", express.static("assets"));
 
-app.get('/', async (request, response) => {
-  renderPage(response, 'index');
+app.get("/", async (request, response) => {
+  renderPage(response, "index");
 });
 app.get("/filmer", async (req, res) => {
   const movies = await loadMovies();
   res.render("filmer", { movies });
- 
 });
 
 app.get("/filmer/movies/:movieId", async (req, res) => {
   const movie = await loadMovie(req.params.movieId);
   res.render("movie", { movie });
-    
 });
 // app.get('/filmer', async (request, response) => {
 //           renderPage(response, 'filmer');
 //         });
 
-app.get('/about-us', async (request, response) => {
-  renderPage(response, 'about-us');
+app.get("/about-us", async (request, response) => {
+  renderPage(response, "about-us");
 });
 
-app.get('/event', async (request, response) => {
-  renderPage(response, 'event');
+app.get("/event", async (request, response) => {
+  renderPage(response, "event");
 });
 
 // app.get('/tickets', async (request, response) => {
 //           renderPage(response, 'Biljetter');
 //         });
 
-        app.get('/english', async (request, response) => {
-          renderPage(response, 'English');
-        });
-        
-            
+app.get("/english", async (request, response) => {
+  renderPage(response, "English");
+});
 
-app.use('/static', express.static('./static'));
+app.use("/static", express.static("./static"));
 
 app.listen(5080);
 
@@ -91,7 +86,8 @@ app.listen(5080);
 //           console.error(err.stack);
 //           res.status(500).send('Internal Server Error');
 //         });
-        
+
 //         app.listen(3080, () => {
 //           console.log('Server is running on http://localhost:3080');
 //         });
+
