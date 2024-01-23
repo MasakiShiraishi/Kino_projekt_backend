@@ -1,0 +1,21 @@
+<main class="movie__main">
+  
+  <div class="movie__img__div">
+   {{#if movie.attributes.image}}
+      <img class ="movie__img" src="{{movie.attributes.image.url}}" />
+    {{/if}}
+    </div>
+    
+  <article class="movie__article">
+    <h1 class="movie__title">{{movie.attributes.title}}</h1>
+    
+    <div class="movie__intro">
+      {{{movie.attributes.intro}}}
+    </div>   
+   <div class="movie__link__div">
+      <a class="movie__link" href="/filmer">Back to home page</a>
+      </div>
+  </article>
+  
+  
+</main>

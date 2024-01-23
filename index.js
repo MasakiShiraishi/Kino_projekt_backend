@@ -1,5 +1,6 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
+import { loadMovie, loadMovies } from "./static/movies.js";
 import fs from 'fs/promises';
 
 const app = express();
@@ -49,9 +50,20 @@ app.use('/assets', express.static('assets'));
 app.get('/', async (request, response) => {
   renderPage(response, 'index');
 });
-app.get('/filmer', async (request, response) => {
-          renderPage(response, 'filmer');
-        });
+app.get("/filmer", async (req, res) => {
+  const movies = await loadMovies();
+  res.render("filmer", { movies });
+ 
+});
+
+app.get("/filmer/movies/:movieId", async (req, res) => {
+  const movie = await loadMovie(req.params.movieId);
+  res.render("movie", { movie });
+    
+});
+// app.get('/filmer', async (request, response) => {
+//           renderPage(response, 'filmer');
+//         });
 
 app.get('/about-us', async (request, response) => {
   renderPage(response, 'about-us');
@@ -68,11 +80,12 @@ app.get('/event', async (request, response) => {
         app.get('/english', async (request, response) => {
           renderPage(response, 'English');
         });
-
+        
+            
 
 app.use('/static', express.static('./static'));
 
-app.listen(3080);
+app.listen(5080);
 
 // app.use((err, req, res, next) => {
 //           console.error(err.stack);

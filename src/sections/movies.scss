@@ -1,0 +1,82 @@
+//for filmer.handlebars
+.filmer {
+  &__title {
+    position: relative;
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  &__li {
+    padding-top: 2.5rem;
+  }
+  &__link {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: $lightgrey;
+    padding-left: 13%;
+    position: relative;
+    display: flex;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+  }
+  &__link:hover {
+    color: yellow;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+}
+//for movie.handlebars
+.movie {
+  &__main {
+    // margin-top: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 25%;
+    max-width: 850px;
+    width: 100%;
+  }
+  &__article{
+    // background-color: RED;
+    min-height: 250px;
+    
+  }
+  &__title {
+    font-size: 3rem;
+  
+  }
+  &__intro {
+    font-size: 2.1rem;
+    color: $lightgreen;
+    margin: 2% 25%;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    // background-color: black;
+  }
+
+  &__img {
+    max-width: 25rem;
+    &__div {
+      width: 200px;
+      height: auto;        
+      float: center;
+      
+    }
+  }
+  &__link {
+    font-size: 2rem;
+    color: $lightgrey;
+    display: block;
+    
+    // background-color: blue; 
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+    &__div{
+      float: right;
+      margin-top: 15%;
+    }
+  }
+  &__link:hover {
+    background-color: blue;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+}

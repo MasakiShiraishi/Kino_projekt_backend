@@ -1,12 +1,14 @@
- <main>
-      <h1>Aktuella filmer</h1>
-      <br />
-      <h2>Bamse och världens minsta äventyr</h2>
-      <p>Familjefilm av Christian Ryltenius</p>
-      <br />
-      <h2>Caravaggios Skugga</h2>
-      <p>Drama av Michele Placido</p>
-      <br />
-      <h2>Cool Hand Luke (Rebell i Bojor)</h2>
-      <p>Drama av Stuart Rosenberg</p>
-    </main>
+<main class="filmer__main">
+  <h1 class="filmer__title">Welcome to our website!</h1>
+
+  <ul>
+    {{#each movies}}
+      <li class="filmer__li">
+        <a class="filmer__link" href="/filmer/movies/{{this.id}}">
+          {{this.attributes.title}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+
+</main>
