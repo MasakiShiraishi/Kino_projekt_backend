@@ -1,5 +1,5 @@
 {
-  "name": "group-assignment2-cinema-project",
+  "name": "kino-projekt-backend",
   "version": "1.0.0",
   "description": "- Language used in commits: English.\r - Be as clear as possible in commits and names.\r - Two approvals on every pull request before merge. Whoever can perform a merge.\r - Prettier extension in Vscode with single quotation.\r - BEM-ish for class names in SASS/CSS.\r - Work in separate branches; dont remove the branch after merge.\r - Assign yourself when working on an issue.\r - Use kebab-case when for branch names.",
   "main": "index.js",
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JrSchoolAccount/Group-Assignment2-Cinema-Project.git"
+    "url": "git+https://masakishiraishi.github.io/Kino_projekt_backend.git"
   },
   "bugs": {
-    "url": "https://github.com/JrSchoolAccount/Group-Assignment2-Cinema-Project/issues"
+    "url": "https://masakishiraishi.github.io/Kino_projekt_backend/issues"
   },
-  "homepage": "https://github.com/JrSchoolAccount/Group-Assignment2-Cinema-Project#readme",
+  "homepage": "https://masakishiraishi.github.io/Kino_projekt_backend#readme",
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
