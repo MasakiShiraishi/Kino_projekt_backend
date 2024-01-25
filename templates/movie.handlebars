@@ -1,17 +1,20 @@
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script type="module">
+   import * as marked from 'https://cdn.jsdelivr.net/npm/marked-gfm-heading-id';</script>
 <main class="movie__main">
   
   <div class="movie__img__div">
-   {{#if movie.attributes.image}}
-      <img class ="movie__img" src="{{movie.attributes.image.url}}" />
+   {{#if movie.image}}
+      <img class ="movie__img" src="{{movie.image.url}}" />
     {{/if}}
     </div>
     
   <article class="movie__article">
-    <h1 class="movie__title">{{movie.attributes.title}}</h1>
-    
-    <div class="movie__intro">
-      {{{movie.attributes.intro}}}
-    </div>   
+    {{!-- <h1 class="movie__title">{{movie.title}}</h1> --}}
+    <md-block>{{movie.title}}</md-block>
+    <markdown='2' class="movie__intro">
+      {{{movie.intro}}}
+    </markdown>   
    <div class="movie__link__div">
       <a class="movie__link" href="/filmer">Back to home page</a>
       </div>
